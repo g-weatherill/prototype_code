@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/quakepy/!svn/ver/336/trunk
+END
+QPCore.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/quakepy/!svn/ver/268/trunk/QPCore.py
+END
+MomentTensor.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/quakepy/!svn/ver/266/trunk/MomentTensor.py
+END
+DataUsed.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/quakepy/!svn/ver/157/trunk/DataUsed.py
+END
+QPElement.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/quakepy/!svn/ver/159/trunk/QPElement.py
+END
+QPDateTime.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/quakepy/!svn/ver/174/trunk/QPDateTime.py
+END
+StationMagnitudeReference.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/quakepy/!svn/ver/157/trunk/StationMagnitudeReference.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/quakepy/!svn/ver/156/trunk/__init__.py
+END
+Phase.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/quakepy/!svn/ver/157/trunk/Phase.py
+END
+OriginQuality.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/quakepy/!svn/ver/157/trunk/OriginQuality.py
+END
+NodalPlanes.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/quakepy/!svn/ver/157/trunk/NodalPlanes.py
+END
+Arrival.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/quakepy/!svn/ver/157/trunk/Arrival.py
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/quakepy/!svn/ver/2/trunk/CHANGELOG
+END
+QPUtils.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/quakepy/!svn/ver/334/trunk/QPUtils.py
+END
+Comment.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/quakepy/!svn/ver/157/trunk/Comment.py
+END
+Axis.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/quakepy/!svn/ver/157/trunk/Axis.py
+END
+EventParameters.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/quakepy/!svn/ver/208/trunk/EventParameters.py
+END
+qpfmd.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/quakepy/!svn/ver/317/trunk/qpfmd.py
+END
+cumuldist.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/quakepy/!svn/ver/277/trunk/cumuldist.py
+END
+Tensor.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/quakepy/!svn/ver/157/trunk/Tensor.py
+END
+QPCatalog.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/quakepy/!svn/ver/334/trunk/QPCatalog.py
+END
+Magnitude.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/quakepy/!svn/ver/208/trunk/Magnitude.py
+END
+StationMagnitude.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/quakepy/!svn/ver/157/trunk/StationMagnitude.py
+END
+WaveformStreamID.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/quakepy/!svn/ver/157/trunk/WaveformStreamID.py
+END
+COPYRIGHT
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/quakepy/!svn/ver/8/trunk/COPYRIGHT
+END
+Event.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/quakepy/!svn/ver/253/trunk/Event.py
+END
+qpseismicityplot.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/quakepy/!svn/ver/274/trunk/qpseismicityplot.py
+END
+EventDescription.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/quakepy/!svn/ver/157/trunk/EventDescription.py
+END
+Pick.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/quakepy/!svn/ver/208/trunk/Pick.py
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/quakepy/!svn/ver/287/trunk/Makefile
+END
+TimeWindow.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/quakepy/!svn/ver/157/trunk/TimeWindow.py
+END
+Origin.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/quakepy/!svn/ver/208/trunk/Origin.py
+END
+QPPolygon.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/quakepy/!svn/ver/255/trunk/QPPolygon.py
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/quakepy/!svn/ver/1/trunk/LICENSE
+END
+IntegerQuantity.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/quakepy/!svn/ver/157/trunk/IntegerQuantity.py
+END
+TimeQuantity.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/quakepy/!svn/ver/157/trunk/TimeQuantity.py
+END
+PrincipalAxes.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/quakepy/!svn/ver/157/trunk/PrincipalAxes.py
+END
+ConfidenceEllipsoid.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/quakepy/!svn/ver/157/trunk/ConfidenceEllipsoid.py
+END
+FocalMechanism.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/quakepy/!svn/ver/266/trunk/FocalMechanism.py
+END
+QPAnnotation.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/quakepy/!svn/ver/270/trunk/QPAnnotation.py
+END
+QPColorMap.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/quakepy/!svn/ver/330/trunk/QPColorMap.py
+END
+OriginUncertainty.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/quakepy/!svn/ver/157/trunk/OriginUncertainty.py
+END
+NodalPlane.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/quakepy/!svn/ver/157/trunk/NodalPlane.py
+END
+qpplot.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/quakepy/!svn/ver/333/trunk/qpplot.py
+END
+CreationInfo.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/quakepy/!svn/ver/157/trunk/CreationInfo.py
+END
+CompositeTime.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/quakepy/!svn/ver/157/trunk/CompositeTime.py
+END
+QPCatalogCompact.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/quakepy/!svn/ver/218/trunk/QPCatalogCompact.py
+END
+RealQuantity.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/quakepy/!svn/ver/157/trunk/RealQuantity.py
+END
+MAINTAINERS
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/quakepy/!svn/ver/2/trunk/MAINTAINERS
+END
+Amplitude.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/quakepy/!svn/ver/157/trunk/Amplitude.py
+END
+SourceTimeFunction.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/quakepy/!svn/ver/157/trunk/SourceTimeFunction.py
+END
+QPGrid.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/quakepy/!svn/ver/208/trunk/QPGrid.py
+END

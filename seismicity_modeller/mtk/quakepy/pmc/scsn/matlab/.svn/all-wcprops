@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab
+END
+calc_probdistribution.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/calc_probdistribution.m
+END
+run_sc.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/run_sc.m
+END
+pmc_ComputeProbabilitiesPerStation.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/pmc_ComputeProbabilitiesPerStation.m
+END
+calc_magnitudefromdistance.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/calc_magnitudefromdistance.m
+END
+import_sc.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/import_sc.m
+END
+calc_probability.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/calc_probability.m
+END
+show_probdistribution.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/show_probdistribution.m
+END
+import_stationlist.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/import_stationlist.m
+END
+import_assignpicks.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/import_assignpicks.m
+END
+lookup_probability.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/lookup_probability.m
+END
+pmc_SelectStationsInOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/pmc_SelectStationsInOperation.m
+END
+generate_distributions.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/generate_distributions.m
+END
+pmc_ComputeCombinedProbability.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/pmc_ComputeCombinedProbability.m
+END
+calc_smooth_probdistribution.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/calc_smooth_probdistribution.m
+END
+pmc_SortStationsForDistances.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/pmc_SortStationsForDistances.m
+END
+import_checkalias.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/import_checkalias.m
+END
+import_alias.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/quakepy/!svn/ver/63/trunk/pmc/scsn/matlab/import_alias.m
+END

@@ -1,0 +1,134 @@
+#*******************************************
+#Fault file in yaml format
+#*******************************************
+tectonic_regionalisation: 
+    - Region_Type: active shallow crust
+      Region_Identifier_Code: 001
+      MagnitudeScalingRelation: {
+          Model: WC1994, 
+          Weight: 1.0}
+      Shear_Modulus: {
+          Value: 30.0,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0}
+
+    - Region_Type: subduction interface
+      Region_Identifier_Code: 002
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 40.,
+          Weight: 1.}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0,}
+
+    - Region_Type: subduction intraslab
+      Region_Identifier_Code: 003
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 40.,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0}
+
+    - Region_Type: stable continental
+      Region_Identifier_Code: 004
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 29.,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.E-4 ,
+          Weight: 1.0}
+
+Fault_Model:
+    - ID: 001
+      tectonic_region: active shallow crust
+      Fault_Name: sumani
+      Fault_Geometry: 
+        - Fault_Typology: Simple
+          # Fault Trace: [Long_1, Lat_1, Long_2, Lat_2, ... Long_n, Lat_n]
+          Fault_Trace: [  100.443843,    -0.502895,  100.459768,    -0.508962,  100.479484,    -0.524886,  100.479484,    -0.535503,  100.477209,    -0.546878,  100.478726,    -0.574936,  100.493892,    -0.606027,  100.539392,    -0.665177,  100.588683,    -0.713710,  100.630391,    -0.781201,  100.639491,    -0.800159,  100.675132,    -0.885092,  100.722907,    -0.951066,  100.749449,    -1.007182]
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth: {Preferred: 0.0, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth: {Preferred: 25.0, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+          strike:     
+          length:
+          width:
+          area:
+          #dip [pref, min, max, quality]
+          dip: {Preferred: 65.0, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+          dip_direction:       58.8
+        - Fault_Typology: Simple
+          Fault_Trace: [  100.443943,    -0.502895,  100.459768,    -0.508962,  100.479484,    -0.524886,  100.479484,    -0.535503,  100.477209,    -0.546878,  100.478726,    -0.574936,  100.493892,    -0.606027,  100.539392,    -0.665177,  100.588683,    -0.713710,  100.630391,    -0.781201,  100.639491,    -0.800159,  100.675132,    -0.885092,  100.722907,    -0.951066,  100.749449,    -1.007182]
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth: {Preferred: 0.0, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth: {Preferred: 25.0, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+          strike:     
+          #dip [pref, min, max, quality]
+          dip: {Preferred: 60.0, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+          dip_direction:       58.8
+          
+      rake: {Preferred: 60.0, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:  {Preferred:  23.00, Minimum: , Maximum: , Quality: 1.0, Distribution: }
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: TruncatedGaussian
+          Model_Weight: 0.4
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+        - Model_Type: AndersonLucoType1
+          Model_Weight: 0.1
+          Maximum_Magnitude: 7.0
+          Minimum_Magnitude: 4.5
+          MFD_spacing: 0.1
+          b_value: [0.8, 0.05]
+        - Model_Type: AndersonLucoType2
+          Model_Weight: 0.1
+          Maximum_Magnitude: 7.0
+          Minimum_Magnitude: 4.5
+          MFD_spacing: 0.1
+          b_value: [0.8, 0.05]
+        - Model_Type: AndersonLucoType3
+          Model_Weight: 0.1
+          Maximum_Magnitude: 7.0
+          Minimum_Magnitude: 4.5
+          MFD_spacing: 0.1
+          b_value: [0.8, 0.05]
+        - Model_Type: YoungsCoppersmith
+          Model_Weight: 0.3
+          Maximum_Magnitude: 7.0
+          Minimum_Magnitude: 4.5
+          MFD_spacing: 0.1
+          b_value: 0.8
+          delta_m1:
+          delta_m2:
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio:
+      Compiled_by:
+      Contributed_by: 
+      Last_Update:       
+ 

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/quakepy/!svn/ver/78/trunk/pmc/scsn
+END
+distro_job_template.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/quakepy/!svn/ver/54/trunk/pmc/scsn/distro_job_template.py
+END
+grid_job_template.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/quakepy/!svn/ver/78/trunk/pmc/scsn/grid_job_template.py
+END
+create_distro_jobs.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/quakepy/!svn/ver/66/trunk/pmc/scsn/create_distro_jobs.py
+END
+create_grid_jobs.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/quakepy/!svn/ver/66/trunk/pmc/scsn/create_grid_jobs.py
+END
+pmc_scsn.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/quakepy/!svn/ver/78/trunk/pmc/scsn/pmc_scsn.py
+END

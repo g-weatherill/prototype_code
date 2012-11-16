@@ -1,0 +1,67 @@
+#***************************************
+# New Modeller Configuration Template
+#***************************************
+
+catalogue_file:
+
+source_model_file: 
+
+selection_settings: {
+    area_buffer: ,
+    fault_buffer: ,
+    point_buffer: ,
+    upper_depth: ,
+    lower_depth: }
+    
+
+
+    
+declustering: {
+    # Algorithm: 'GardnerKnopoffType1' | 'Afteran' | 'Reasenberg'
+    algorithm: 'GardnerKnopoffType1',
+    # Search window options: 'GardnerKnopoff', 'Uhrhammer', '
+    window_opt: 'GardnerKnopoff',
+    fs_time_prop: ,
+    purge: }
+    
+completeness: { 
+    # Algorithm: 'Stepp1971' | 'AssumedMFD' 
+    algorithm: 
+   }
+    
+recurrence: {
+    #Algorithm: 'bMaximumLikelihood, KijkoSmit, Wiechert'
+    algorithm:  
+    # If reference_magnitude is empty then will return a-value
+    reference_magnitude: 4.0,
+    magnitude_interval:0.1,
+    # Average Type: Harmonic | Otherwise - 
+    # applies to bMaximumLikelihood only 
+    Average Type:     }
+
+mmax: {
+    #Algorithm: 'KijkoSellevol' | 'KijkoSellevolBayes' | 'KijkoNPG' | 
+    # 'CumulativeMoment'
+    algorithm: 'CumulativeMoment',
+    # Input mmax - if missing will take maximum from catalogue
+    input_mmax: ,
+    # Input mmax uncertainty - is missing will take from corresponding mmax
+    input_mmax_uncertainty: ,
+    #The following are iteration parameters applying only to Kijko*
+    maximum_iterations: ,
+    tolerance: ,
+    input_mmin: ,
+    # For KijkoSellevol and KijkoSellevolBayes need b-value
+    b-value: 1.0,
+    # and for KijkoSellevoBayes need b-value uncertainty
+    sigma-b: 0.1,
+    # For KijkoNPG need discretise pdf - number of bins
+    number_samples: 51,
+    # Also for KijkoNPG number N largest earthquakes
+    number_earthquakes: 100,
+    # For Cumulative Moment need number of bootstrap samples
+    number_bootstraps: 100}
+    
+    
+    
+    

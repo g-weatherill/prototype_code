@@ -1,0 +1,1 @@
+from scalerel.wc1994 import WC1994

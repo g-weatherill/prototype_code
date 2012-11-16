@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/quakepy/!svn/ver/228/trunk/test/unitTest
+END
+QPCatalogTest.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/quakepy/!svn/ver/214/trunk/test/unitTest/QPCatalogTest.py
+END
+QPUtilsTest.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/quakepy/!svn/ver/228/trunk/test/unitTest/QPUtilsTest.py
+END

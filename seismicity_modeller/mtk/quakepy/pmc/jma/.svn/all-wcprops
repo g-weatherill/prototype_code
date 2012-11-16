@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/quakepy/!svn/ver/248/trunk/pmc/jma
+END
+jma_create_full_jobs.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/quakepy/!svn/ver/195/trunk/pmc/jma/jma_create_full_jobs.py
+END
+jma_compute_all.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/quakepy/!svn/ver/147/trunk/pmc/jma/jma_compute_all.py
+END
+ot-compMonthlyPickInfo-2000.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/quakepy/!svn/ver/98/trunk/pmc/jma/ot-compMonthlyPickInfo-2000.py
+END
+ot-compYearlyDistros-last-01.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/quakepy/!svn/ver/98/trunk/pmc/jma/ot-compYearlyDistros-last-01.py
+END
+ot-compYearlyDistros-all-01.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/quakepy/!svn/ver/98/trunk/pmc/jma/ot-compYearlyDistros-all-01.py
+END
+pmc_jma.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/quakepy/!svn/ver/174/trunk/pmc/jma/pmc_jma.py
+END

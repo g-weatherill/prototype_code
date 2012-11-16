@@ -1,0 +1,120 @@
+#*******************************************
+#Fault file in yaml format
+#*******************************************
+tectonic_regionalisation: 
+    - Region_Type: active shallow crust
+      Region_Identifier_Code: 001
+      MagnitudeScalingRelation: {
+          Model: [WellsCoppersmith, HanksBakun, UCERF],
+          Weight: [0.4, 0.3, 0.3]}
+      Shear_Modulus: {
+          Value: [30.0, 35.0, 40.0],
+          Weight: [0.5, 0.25, 0.25]}
+      DisplacementLengthRatio: {
+          Value: [1.0E-5, 1.25E-5, 5.0E-5, 1.0E-4],
+          Weight: [0.2, 0.5, 0.2, 0.1]}
+      AspectRatio: {
+          Value: 1.5,
+          Weight: 1.0}
+      GMPE: {
+          Model: [BooreAtkinson2008, Zhao_etal2006, ChiouYoungs2008],
+          Weight: [0.33, 0.33, 0.34]}
+
+    - Region_Type: subduction interface
+      Region_Identifier_Code: 002
+      MagnitudeScalingRelation: {
+          Model: [Strasser2010],
+          Weight: [1.]}
+      Shear_Modulus: {
+          Value: [40., 45., 49.],
+          Weight: [0.5, 0.25, 0.25]}
+      DisplacementLengthRatio: {
+          Value: [1.0E-5, 1.25E-5, 5.0E-5, 1.0E-4],
+          Weight: [0.2, 0.5, 0.2, 0.1]}
+      AspectRatio: {
+          Value: 1.5,
+          Weight: 1.0}
+      GMPE: {
+          Model: [Zhao_etal2006, Youngs_etal1997, AtkinsonBoore2003],
+          Weight: [0.4, 0.3, 0.3]}
+    
+    - Region_Type: subduction intraslab
+      Region_Identifier_Code: 003
+      MagnitudeScalingRelation: {
+          Model: [Strasser2010],
+          Weight: [1.]}
+      Shear_Modulus: {
+          Value: [40., 45., 49.],
+          Weight: [0.5, 0.25, 0.25]}
+      DisplacementLengthRatio: {
+          Value: [1.0E-5, 1.25E-5, 5.0E-5, 1.0E-4],
+          Weight: [0.2, 0.5, 0.2, 0.1]}
+      AspectRatio: {
+          Value: 1.5,
+          Weight: 1.0}
+      GMPE: {
+          Model: [Zhao_etal2006, Youngs_etal1997, AtkinsonBoore2003],
+          Weight: [0.4, 0.3, 0.3]}
+
+    - Region_Type: stable continental
+      Region_Identifier_Code: 004
+      MagnitudeScalingRelation: {
+          Model: [Sommerville],
+          Weight: [1.]}
+      Shear_Modulus: {
+          Value: [20., 25., 29.],
+          Weight: [0.5, 0.25, 0.25]}
+      DisplacementLengthRatio: {
+          Value: [5.0E-5, 1.0E-4],
+          Weight: [0.4, 0.6]}
+      AspectRatio: {
+          Value: 1.5,
+          Weight: 1.0}
+      GMPE: {
+          Model: [Atkinson, Toro_etal],
+          Weight: [0.4, 0.6]}
+
+Fault_Model:
+    - ID: 001
+      tectonic_region: subduction interface
+      Fault_Name: Chittagong
+      # Choose from: Simple, Complex, Generalised
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [   90.5632,    24.9265,   90.5108,    23.8924,   90.6156,    22.4002,   90.9952,    21.2876],
+          length:   448.0000,
+          width:   355.6851,
+          area: 159346.9296,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth: [      4.00,       0.00,       5.00,        3],
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth: [     35.00,      20.00,      50.00,        3],
+          strike:      355.0,
+          #dip [pref, min, max, quality]
+          dip: [      5.00,       4.00,      10.00,        3],
+          dip_direction:       85.0}
+      rake: 0.0
+      slip_type: Thrust
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip: [     20.00,      11.00,      20.00,        3]
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: [      0.00,        4]
+      #displacement [pref, min, max]
+      displacement: [     10.00,       5.00,      20.00]
+      MFD_Model: Char Eq.
+      Megazone: East_Bengal
+      Mmax:     8.56
+      Shear Modulus:     27.700
+
+
+
+
+
+
+
+
+
+
+
+

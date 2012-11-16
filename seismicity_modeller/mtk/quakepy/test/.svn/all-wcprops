@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/quakepy/!svn/ver/254/trunk/test
+END
+QPTestCase.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/quakepy/!svn/ver/70/trunk/test/QPTestCase.py
+END
+QPUnitTest.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/quakepy/!svn/ver/228/trunk/test/QPUnitTest.py
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/quakepy/!svn/ver/72/trunk/test/Makefile
+END

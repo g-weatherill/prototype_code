@@ -1,0 +1,451 @@
+#*******************************************
+#Fault file in yaml format
+#*******************************************
+tectonic_regionalisation: 
+    - Region_Type: active shallow crust
+      Region_Identifier_Code: 001
+      MagnitudeScalingRelation: {
+          Model: WC1994, 
+          Weight: 1.0}
+      Shear_Modulus: {
+          Value: 30.0,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0}
+
+    - Region_Type: subduction interface
+      Region_Identifier_Code: 002
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 40.,
+          Weight: 1.}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0,}
+
+    - Region_Type: subduction intraslab
+      Region_Identifier_Code: 003
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 40.,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0}
+
+    - Region_Type: stable continental
+      Region_Identifier_Code: 004
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 29.,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.E-4 ,
+          Weight: 1.0}
+
+Fault_Model:
+    - ID: 1
+      tectonic_region: active shallow crust
+      Fault_Name: sumani
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [  100.443843,    -0.502895,  100.459768,    -0.508962,  100.479484,    -0.524886,  100.479484,    -0.535503,  100.477209,    -0.546878,  100.478726,    -0.574936,  100.493892,    -0.606027,  100.539392,    -0.665177,  100.588683,    -0.713710,  100.630391,    -0.781201,  100.639491,    -0.800159,  100.675132,    -0.885092,  100.722907,    -0.951066,  100.749449,    -1.007182],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      328.8,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       58.8}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    23.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 2
+      tectonic_region: active shallow crust
+      Fault_Name: suliti
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [  100.686507,    -0.985949,  100.716082,    -1.018557,  100.743382,    -1.040549,  100.774473,    -1.073157,  100.782815,    -1.104248,  100.821490,    -1.162639,  100.860164,    -1.197522,  100.935997,    -1.302930,  100.993630,    -1.393170,  101.031546,    -1.440187,  101.114962,    -1.567586,  101.139228,    -1.598677,  101.192311,    -1.674510,  101.199895,    -1.707118,  101.197620,    -1.738209],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      325.8,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       55.8}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    23.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 3
+      tectonic_region: active shallow crust
+      Fault_Name: siulak
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [  101.157428,    -1.685885,  101.225678,    -1.777642,  101.294685,    -1.886083,  101.342460,    -1.934616,  101.406101,    -2.016415,  101.493860,    -2.128108,  101.585883,    -2.237188],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      322.2,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       52.2}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    11.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 4
+      tectonic_region: active shallow crust
+      Fault_Name: dikit
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [  101.504411,    -2.293670,  101.529273,    -2.319568,  101.573818,    -2.387939,  101.619398,    -2.444914,  101.749924,    -2.581655,  101.820366,    -2.671780,  101.865947,    -2.725648,  101.899401,    -2.752499],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      319.3,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       49.3}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    11.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 5
+      tectonic_region: active shallow crust
+      Fault_Name: ketaun
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [  101.902376,    -2.754078,  101.935383,    -2.777687,  102.034591,    -2.866614,  102.071601,    -2.908250,  102.150229,    -3.006628,  102.194968,    -3.057833,  102.213987,    -3.080450,  102.249455,    -3.112320,  102.356802,    -3.253164,  102.457552,    -3.337465,  102.487708,    -3.376531,  102.579548,    -3.447810],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      315.7,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       45.7}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    11.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 6
+      tectonic_region: active shallow crust
+      Fault_Name: toru
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [   99.070493,     1.860932,   99.125986,     1.776796,   99.219850,     1.633543,   99.403345,     1.375586,   99.505218,     1.212535],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      326.2,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       56.2}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    24.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 7
+      tectonic_region: active shallow crust
+      Fault_Name: angkola
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [   99.220862,     1.531552,   99.270985,     1.458157,   99.322898,     1.356121,   99.363455,     1.257245,   99.417774,     1.089395,   99.448206,     0.990939,   99.518020,     0.853100,   99.569933,     0.718842,   99.621847,     0.634707,   99.765017,     0.528583,   99.913634,     0.416314,   99.981658,     0.342919,  100.017461,     0.298166,  100.015671,     0.253414],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      328.1,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       58.1}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    19.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 8
+      tectonic_region: active shallow crust
+      Fault_Name: baramun
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [   99.507458,     1.210615,   99.532411,     1.190460,   99.557365,     1.173824,   99.626731,     1.105662,   99.664283,     1.065325,   99.718883,     0.990250,   99.874340,     0.825693,   99.971405,     0.721044,  100.003255,     0.683128,  100.054821,     0.597437,  100.084396,     0.469280,  100.101079,     0.431363,  100.118521,     0.376764,  100.104871,     0.294106],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      326.9,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       56.9}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    23.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 9
+      tectonic_region: active shallow crust
+      Fault_Name: sumpur
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [  100.104113,     0.294865,  100.126862,     0.235715,  100.173879,     0.155333,  100.214979,     0.072504,  100.248195,    -0.031974,  100.245161,    -0.074440,  100.238336,    -0.089607,  100.223928,    -0.100224],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      343.1,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       73.1}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    23.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 1.0
+          Maximum_Magnitude:   6.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 
+    - ID: 10
+      tectonic_region: active shallow crust
+      Fault_Name: sianok
+      Fault_Geometry: {
+          Fault_Typology: Simple,
+          Fault_Trace: [  100.123829,     0.002151,  100.189045,    -0.071407,  100.252210,    -0.161519,  100.355119,    -0.316347,  100.456979,    -0.467344,  100.487826,    -0.524128,  100.510576,    -0.533228,  100.543184,    -0.550670,  100.559867,    -0.563561,  100.578067,    -0.602994,  100.590200,    -0.630294,  100.602333,    -0.676552],
+          length: ,
+          width: ,
+          area: ,
+          #Upper Seismogenic Depth [pref, min, max, quality]
+          Upper_Depth:      0.0,
+          #Lower Seismogenic Depth [pref, min, max, quality]
+          Lower_Depth:     25.0,
+          strike:      324.8,
+          #dip [pref, min, max, quality]
+          dip:     90.0,
+          dip_direction:       54.8}
+      rake: 0.0
+      slip_type: Strike-Slip
+      slip_completeness_factor: 1
+      #slip [pref, min, max, quality]
+      slip:    23.00
+      #Aseismic Slip Factor [pref, quality]
+      aseismic: 0.0
+      #displacement [pref, min, max]
+      displacement: 0.0
+      MFD_Model: 
+        - Model_Type: Characteristic
+          Model_Weight: 0.5
+          Maximum_Magnitude:   7.0
+          MFD_spacing: 0.1
+          Sigma: 0.1
+          Lower_Bound: -2.0
+          Upper_Bound: 2.0
+        - Model_Type: YoungsCoppersmith
+          Model_Weight: 0.5
+          Maximum_Magnitude: 7.5
+          Minimum_Magnitude: 5.0
+          b_value: 1.0
+          MFD_spacing: 0.1
+          delta_m1:
+          delta_m2:
+      Megazone: 
+      Shear_Modulus:     30.000
+      MagnitudeScalingRelation: WC1994
+      AspectRatio: 
+      DisplacementLengthRatio: 

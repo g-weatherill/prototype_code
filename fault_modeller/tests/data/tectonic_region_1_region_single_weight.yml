@@ -1,0 +1,15 @@
+#*******************************************
+#Fault file in yaml format
+#*******************************************
+tectonic_regionalisation: 
+    - Region_Type: active shallow crust
+      Region_Identifier_Code: 001
+      MagnitudeScalingRelation: {
+          Model: WC1994, 
+          Weight: 1.0}
+      Shear_Modulus: {
+          Value: 30.0,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0}

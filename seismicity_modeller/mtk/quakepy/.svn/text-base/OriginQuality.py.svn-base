@@ -1,0 +1,70 @@
+# -*- coding: iso-8859-1 -*-
+#
+# quakepy/OriginQuality.py
+# $Id$
+#
+# The QuakePy package
+# http://www.quakepy.org
+#
+
+############################################################################
+#    Copyright (C) 2007-2009 by Fabian Euchner and Danijel Schorlemmer     #
+#    fabian@fabian-euchner.de                                              #
+#                                                                          #
+#    This program is free software; you can redistribute it and#or modify  #
+#    it under the terms of the GNU General Public License as published by  #
+#    the Free Software Foundation; either version 2 of the License, or     #
+#    (at your option) any later version.                                   #
+#                                                                          #
+#    This program is distributed in the hope that it will be useful,       #
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of        #
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         #
+#    GNU General Public License for more details.                          #
+#                                                                          #
+#    You should have received a copy of the GNU General Public License     #
+#    along with this program; if not, write to the                         #
+#    Free Software Foundation, Inc.,                                       #
+#    59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             #
+############################################################################
+
+"""
+The QuakePy package
+http://www.quakepy.org
+"""
+
+__version__  = '$Id$'
+__revision__ = '$Revision$'
+__author__   = "Fabian Euchner <fabian@fabian-euchner.de>, Danijel Schorlemmer <ds@usc.edu>"
+__license__  = "GPL"
+
+from QPCore import *
+
+class OriginQuality( QPObject ):
+    """
+    QuakePy: OriginQuality
+    """
+
+    # <!-- UML2Py start -->
+    addElements = QPElementList( (
+                    QPElement( 'associatedPhaseCount', 'associatedPhaseCount', 'element', int, 'basic' ),
+                    QPElement( 'usedPhaseCount', 'usedPhaseCount', 'element', int, 'basic' ),
+                    QPElement( 'associatedStationCount', 'associatedStationCount', 'element', int, 'basic' ),
+                    QPElement( 'usedStationCount', 'usedStationCount', 'element', int, 'basic' ),
+                    QPElement( 'depthPhaseCount', 'depthPhaseCount', 'element', int, 'basic' ),
+                    QPElement( 'standardError', 'standardError', 'element', float, 'basic' ),
+                    QPElement( 'azimuthalGap', 'azimuthalGap', 'element', float, 'basic' ),
+                    QPElement( 'secondaryAzimuthalGap', 'secondaryAzimuthalGap', 'element', float, 'basic' ),
+                    QPElement( 'minimumDistance', 'minimumDistance', 'element', float, 'basic' ),
+                    QPElement( 'maximumDistance', 'maximumDistance', 'element', float, 'basic' ),
+                    QPElement( 'medianDistance', 'medianDistance', 'element', float, 'basic' ),
+                    QPElement( 'groundTruthLevel', 'groundTruthLevel', 'element', unicode, 'basic' )
+                  ) )
+    # <!-- UML2Py end -->
+    
+    def __init__( self, **kwargs ):
+        super( OriginQuality, self ).__init__( **kwargs )
+
+        self.elements.extend( self.addElements )
+        self._initMultipleElements()
+
+        

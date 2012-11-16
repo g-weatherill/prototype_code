@@ -1,0 +1,51 @@
+#*******************************************
+#Fault file in yaml format
+#*******************************************
+tectonic_regionalisation: 
+    - Region_Type: active shallow crust
+      Region_Identifier_Code: 001
+      MagnitudeScalingRelation: {
+          Model: WC1994, 
+          Weight: 1.0}
+      Shear_Modulus: {
+          Value: 30.0,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0}
+
+    - Region_Type: subduction interface
+      Region_Identifier_Code: 002
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 40.,
+          Weight: 1.}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0,}
+
+    - Region_Type: subduction intraslab
+      Region_Identifier_Code: 003
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 40.,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.25E-5,
+          Weight: 1.0}
+
+    - Region_Type: stable continental
+      Region_Identifier_Code: 004
+      MagnitudeScalingRelation: {
+          Model: WC1994,
+          Weight: 1.}
+      Shear_Modulus: {
+          Value: 29.,
+          Weight: 1.0}
+      DisplacementLengthRatio: {
+          Value: 1.E-4 ,
+          Weight: 1.0}
