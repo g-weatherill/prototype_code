@@ -3,8 +3,9 @@
 '''Basic Example of a source model class'''
 
 import numpy as np
+from math import fabs
 from parsers.source_model.nrml_minimal_format import nrmlSourceModelParser
-from scientific.new_recurrence import Recurrence
+#from scientific.new_recurrence import Recurrence
 
 
 file_parser = {'nrml':  nrmlSourceModelParser()}
@@ -46,20 +47,74 @@ class mtkSourceModel(object):
 
 
 
-    def get_gutenberg_richter_recurrence(self, catalogue, recurrence_config):
+    def get_gutenberg_richter_recurrence(self, catalogue, recurrence_config, 
+        folder_path=None, file_type=None, file_dpi=None):
         '''For each source in the source model calculate recurrence parameters
         '''
-        recurrence = Recurrence()
-        for source in self.source_model
+        #recurrence = Recurrence()
+        if folder_path:
+            if not file_type:
+                file_type = 'png'
+            if not file_dpi:
+                file_dpi = 300
+            if not '/' in folder_path[-1]:
+                folder_path = folder_path + '/'
+
+        for source in self.source_model:
             # Find earthquakes from catalogue
             source.find_earthquakes_in_source(
                 catalogue, 
                 recurrence_config['buffer'][source.typology],
                 recurrence_config['buffer']['upper_depth'],
                 recurrence_config['buffer']['lower_depth'])
-            source.mfd = source.catalogue.recurrence(recurrence_config)
+            
+            if source.catalogue.number_events < 2:
+                print 'Source %i, %s contains fewer than 2 events - skipping'\
+                    % source.identifier, source.name
+                    continue
+            source.catalogue.recurrence(recurrence_config)
+            source.mfd = source.catalogue.recurrence.mfd_parameters
+            if folder_path:
+                # Plot figure as output
+                # Get filename
+                figure_name = folder_path + '_' + str(source.identifier) +\
+                    '_' + source.name + '.' + file_type
+                mag_values, abs_rates, cum_rates = \
+                    source.catalogue.get_completeness_adjusted_rates()
+                source.catalogue.plot_completeness_adjusted_rates(
+                    figure_name,                    
+                    mag_values,
+                    abs_rates,
+                    cum_rates,
+                    fig_dpi = file_dpi,
+                    fig_format = file_type)
 
-     
+                                     
+        
+
+    def get_instrumental_mmax(self, catalogue, mmax_config):
+        '''Calculate the instrumental maximum magnitude for each zone'''
+        original_config = deepcopy(mmax_config)
+        for source in self.source_model:
+            # If a b-value and/or sigma-b is present in the source.mfd then
+            # this temporarily overwrites the b-value in mmax_config
+            if not source.mfd:
+                source.mfd = {'Mmax': None, 'Mmax_Uncertainty': None}
+
+            if 'bvalue' in source.mfd.keys():
+                mmax_config['b-value'] = source.mfd['b-value']
+            
+            if 'sigma_bvalue' in source.mfd.keys():
+                mmax_config['sigma b'] = source.mfd['sigma_bvalue']
+            output, valid_config = source.catalogue.maximum_magnitude(
+                mmax_config, 
+                valid_config=False)
+            source.mfd['Mmax'] = output['Mmax']
+            source.mfd['Mmax_Uncertainty'] = output['Mmax_Uncertainty']
+
+
+   
+
 #    def get_gutenberg_richter_recurrence(self, catalogue, recurrence_config, 
 #        selection_settings=None):
 #        '''Loop throught the sources and calculate a- and b-values for each

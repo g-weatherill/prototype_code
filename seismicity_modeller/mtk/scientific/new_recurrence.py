@@ -153,6 +153,7 @@ class Recurrence(object):
         self.mfd_parameters = {'rate': None, 'sigma_rate': None, 
                                'bvalue': None, 'sigma_bvalue': None, 
                                'corner_magnitude': None, 'sigma_mc': None}
+        self.reference_magnitude = None
 
     def run_recurrence(self, catalogue, config, completeness=None):
         '''Execute the recurrence calculations'''
@@ -162,8 +163,7 @@ class Recurrence(object):
         self.mfd_parameters['sigma_rate'] = sigma_rate
         self.mfd_parameters['bvalue'] = bvalue
         self.mfd_parameters['sigma_bvalue'] = sigma_bvalue
-        
-        return self.mfd_parameters
+        self.reference_magnitude = config['reference_magnitude'] 
 
 
 class SeismicityRecurrence(object):
@@ -383,14 +383,14 @@ class Weichert(SeismicityRecurrence):
         if (not 'maxiter' in key_list) or (not config['maxiter']):
             config['maxiter'] = 1000
 
-        bval, sigma_b, aval, sigma_a = self.weichert_algorithm(t_per,
-            cent_mag, n_obs, ref_mag, config['bvalue'], config['itstab'], 
-            config['maxiter'])
-
+        bval, sigma_b, rate, sigma_rate, aval, sigma_a = \
+            self.weichert_algorithm(t_per, cent_mag, n_obs, ref_mag, 
+            config['bvalue'], config['itstab'], config['maxiter'])
+        print bval, sigma_b, rate, sigma_rate, aval, sigma_a
         if not config['reference_magnitude']:
-            aval = np.log10(aval)
-            sigma_a = np.log10(sigma_a)
-        return bval, sigma_b, aval, sigma_a
+            rate = np.log10(aval)
+            sigma_rate = np.log10(sigma_a)
+        return bval, sigma_b, rate, sigma_rate
 
     def _weichert_prep(self, year, magnitude, ctime, cmag, dmag, dtime=1.0):
         """
@@ -512,19 +512,19 @@ class Weichert(SeismicityRecurrence):
                 bval = beta / np.log(10.0)
                 sigb = sigbeta / np.log(10.)
                 fngtm0 = nkount * (sumexp / sumtex)
-                fn0 = fngtm0 * np.exp((-beta) * (fmag[0] - (d_m / 2.0)))
+                fn0 = fngtm0 * np.exp((beta) * (fmag[0] - (d_m / 2.0)))
                 stdfn0 = fn0 / np.sqrt(nkount)
-                if mrate == 0.:
-                    a_m = fngtm0
-                    siga_m = stdfn0
-                else:
-                    a_m = fngtm0 * np.exp((-beta) * (mrate -
-                                                    (fmag[0] - (d_m / 2.0))))
-                    siga_m = a_m / np.sqrt(nkount)
+                #if mrate == 0.:
+                #    a_m = fn0
+                #    siga_m = stdfn0
+                #else:
+                a_m = fngtm0 * np.exp((-beta) * (mrate -
+                                                (fmag[0] - (d_m / 2.0))))
+                siga_m = a_m / np.sqrt(nkount)
                 itbreak = 1
             else:
                 iteration += 1
                 if iteration > maxiter:
                     raise RuntimeError('Maximum Number of Iterations reached')
                 continue
-        return bval, sigb, a_m, siga_m
+        return bval, sigb, a_m, siga_m, fn0, stdfn0

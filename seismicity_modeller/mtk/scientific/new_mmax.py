@@ -35,7 +35,7 @@ def _get_magnitude_vector_properties(catalogue, config):
                               config['input_mmin'] - 1.E-7))
         mmin = config['input_mmin']
     else:
-        neq = np.float(len(catalogue['magnitude'])
+        neq = np.float(len(catalogue['magnitude']))
         mmin = np.min(catalogue['magnitude'])
     return neq, mmin
 
@@ -43,10 +43,10 @@ def _get_magnitude_vector_properties(catalogue, config):
 class InstrumentalMMax(object):
     '''Class for estimation of mmax from instrumental seismicity'''
     def __init__(self):
-        self.mmax_master = {'KijkoSellevol': KijkoSellevolFixedb(),
-                            'KijkoSellevolBayes': KijkoSellevolUncertainb(), 
-                            'KijkoNPG': KijkoNonParametricGaussian(),
-                            'CumulativeMoment': CumulativeMoment()}
+        self.mmax_master = {'Kijko Sellevol': KijkoSellevolFixedb(),
+                            'Kijko Sellevol Bayes': KijkoSellevolUncertainb(), 
+                            'Kijko NPG': KijkoNonParametricGaussian(),
+                            'Cumulative Moment': CumulativeMoment()}
 
     def analyse(self, catalogue, config):
         '''Calculate mmax'''
@@ -55,13 +55,45 @@ class InstrumentalMMax(object):
             config)
         return mmax, sigma_mmax
 
+    def check_config(self, config):
+        '''Checks config file for consistency with the selected algorithms'''
+        config = self.mmax_master[config['algorithm']].check_config(config)
+        return config, True
+
+#        if (config['algorithm'] is 'Kijko Sellevol Fixed b'):
+#            if 'b-value' not in config.keys():
+#                raise ValueError('b-value must be specified for Kijko Sellevol'
+#                                 ' Fixed b')
+#            if 'input_mmin' not in config.keys():
+#                 raise ValueError('Minimum magnitude must be specfied for' 
+#                                  'Kijko & Sellevol Algorithms')
+#        if config['algorithm'] is 'Kijko Sellevel Uncertain b':
+#            if 'b-value' not in config.keys():
+#                raise ValueError('b-value must be specified for Kijko Sellevol'
+#                                 ' Uncertain b')
+#
+#            if 'sigma b' not in config.keys():
+#                raise ValueError('b-value uncertainty must be specified for' 
+#                                 'Kijko Sellevol Uncertain b')
+#            if 'input_mmin' not in config.keys():
+#                 raise ValueError('Minimum magnitude must be specfied for' 
+#                                  'Kijko & Sellevol Algorithms')
+#        
+#        if config['algorithm'] is 'Kijko-NPG' and \
+#            ('number_earthquakes' not in config.keys()):
+#            raise ValueError('Number of earthquakes must be specified for '
+#                             'Kijko Non-Parametric Gaussian algorithm')
+            
+            
+
+
 
 class MaximumMagnitude(object):
     '''Base class for implementation of maximum magnitude calculators'''
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def get_mmax(self, catalogue, config, **kwargs)
+    def get_mmax(self, catalogue, config, **kwargs):
         '''Calculates maximum magnitude from an input catalogue
         :param catalogue: Catalogue dictionary (as defined in mtk_catalogue)
         :type catalogue: dictionary
@@ -88,7 +120,7 @@ class MaximumMagnitude(object):
 
 class KijkoSellevolFixedb(MaximumMagnitude):
     '''Implements Kijko and Sellevol estimator with a fixed b-value'''
-    def get_mmax(self, catalogue, config)
+    def get_mmax(self, catalogue, config):
         '''Calculate mmax
         
         :return: **mmax** Maximum magnitude and **mmax_sig** corresponding
@@ -395,14 +427,27 @@ class CumulativeMoment(MaximumMagnitude):
         mag = catalogue['magnitude']
         sigma_m = catalogue['sigmaMagnitude']
         neq = np.shape(mag)[0]
-        mmax_samp = np.zeros(config['number_bootstraps', dtype=float)
+        mmax_samp = np.zeros(config['number_bootstraps'], dtype=float)
         for iloc in range(0, config['number_bootstraps']):
             mw_sample = mag + sigma_m * np.random.normal(0, 1, neq)
-            mmax_samp[iloc] = cumulative_moment(catalogue['year'], mw_sample)
+            mmax_samp[iloc] = self.cumulative_moment(catalogue['year'], 
+                                                     mw_sample)
         
         # Return mean and standard deviation of sample
-        return np.mean(mmax_samp), np.std(mmax_samp, ddof = 1)
+        if len(mmax_samp) == 1:
+            sigma_mmax = 0.
+        else:
+            sigma_mmax = np.std(mmax_samp, ddof=1)
+        
+        return np.mean(mmax_samp), sigma_mmax
 
+    def check_config(self, config):
+        '''Checks the configuration file'''
+        if ('number_bootstraps' not in config.keys()) or \
+            (config['number_bootstraps'] < 1):
+            config['number_bootstraps'] = 1
+
+        return config        
 
     def cumulative_moment(self, year, mag, iplot = False):
         '''Calculation of Mmax using aCumulative Moment approach, adapted from
@@ -468,7 +513,7 @@ class CumulativeMoment(MaximumMagnitude):
         mmax_samp = np.zeros(nbootstrap)
         for i in range(0, nbootstrap):
             mw_sample = mag + sigma_m * np.random.normal(0, 1, neq)
-            mmax_samp[i] = cumulative_moment(year, mw_sample)
+            mmax_samp[i] = self.cumulative_moment(year, mw_sample)
         
         # Return mean and standard deviation of sample
         return np.mean(mmax_samp), np.std(mmax_samp, ddof = 1)
